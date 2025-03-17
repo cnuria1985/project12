@@ -1,4 +1,5 @@
-#from typing import List[Dict[str, Any]]
+#from typing import List, Dict, Any
+#from typing import List [Dict[str, Any]]
 
 def filter_by_state (list_of_dictionaries: list, state: str) -> list:
     """Функция возвращает список словарей, содержащий только те словари, у которых ключ state"""
@@ -8,6 +9,9 @@ def filter_by_state (list_of_dictionaries: list, state: str) -> list:
             total_of_dictionary.append(dictionary)
     return total_of_dictionary
 
+
+def sort_by_date (list_of_dates: list) -> list:
+    """Функция возвращает список словарей, отсортированный по дате"""
 
 
 if __name__ == "__main__":
