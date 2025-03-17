@@ -2,7 +2,7 @@
 # from typing import List [Dict[str, Any]]
 
 
-def filter_by_state(list_of_dictionaries: list, state: str) -> list:
+def filter_by_state(list_of_dictionaries: list, state: str = "EXECUTED") -> list:
     """Функция возвращает список словарей, содержащий только те словари, у которых ключ state"""
     total_of_dictionary = []
     for dictionary in list_of_dictionaries:
