@@ -1,14 +1,19 @@
-# from typing import List, Dict, Any
-# from typing import List [Dict[str, Any]]
+from typing import List, Dict, Any
+from typing import List [Dict[str, Any]]
 
 
-def sort_by_date(list_of_dictionaries: list) -> list:
+def sort_by_date(list_of_dictionaries: list, reverse: bool = True) -> list:
     """Функция возвращает список словарей, отсортированный по дате"""
     for dictionary in list_of_dictionaries:
+    #"""Для словаря в данном списке словарей"""
         total_of_dictionary = sorted(
-            list_of_dictionaries, key=lambda x: x["date"], reverse=True
+    #"""Обозначение списка, который будет содержать отсортированные по дате словари, задаём команду sorted"""
+            list_of_dictionaries, key=lambda x: x["date"], reverse=reverse
         )
+    """Обозначаем в скобках из какого списка берём словари для сортировки, задаём функцию лямбда, выполняющую 
+    одно действие (сбор дат из каждого словаря заданного списка), обозначаем реверс"""
     return total_of_dictionary
+    #"""Функция возвращает список total... с отсортированными словарями"""
 
 
 if __name__ == "__main__":
@@ -33,3 +38,4 @@ if __name__ == "__main__":
         ]
     )
     print(total_of_dictionary)
+#"""В блоке if __name...задаём данные для сортировки"""
